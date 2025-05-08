@@ -1,0 +1,22 @@
+
+.produtos {
+padding: 20px 20px;
+}
+
+.p-content {
+    max-width:1240px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.desconto {
+    width: 400px;
+}
+
+.desconto img {
+    width: 100%;
+}
+
