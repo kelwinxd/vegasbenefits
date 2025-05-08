@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+  <header>
+    <nav>
+        <div class="logo">
+            <img src="./imgs/logo11.png" alt="" srcset="">
+        </div>
+
+        <section class="search">
+            <div id="openModalBtn"><i class="fas fa-search"></i> <span>Pesquisar descontos</span>
+            </div>
+         </section>
+        <ul>
+            <li>Produtos</li>
+            <li>Parceiros</li>
+            <li>Ajuda</li>
+        </ul>
+
+        <div class="config">
+            <img src="./imgs/engrenagem.png" alt="">
+        </div>
+    </nav>
+  </header>
+
+<!-- Botão para abrir o modal -->
+
+
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+    
+        
+        <div class="modal-inner">
+         
+          <!-- Área de filtros -->
+          <div class="filters-area">
+            <div class="search-header">
+                <button id="closeModalBtn" class="close-btn"><i class="fas fa-arrow-left"></i>
+                </button> <span>Procure Descontos </span>
+            </div>
+          
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Buscar por nome..." autofocus />
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+      
+            <div class="filters">
+              <select id="filterCity">
+                <option value="">Todas as cidades</option>
+                <option value="americana">Americana</option>
+                <option value="osasco">Osasco</option>
+              </select>
+              
+              <select id="filterSegment">
+                <option value="">Todos os segmentos</option>
+                <option value="academia">Academia</option>
+                <option value="farmacia">Farmácia</option>
+                <option value="telemedicina">Médico</option>
+              </select>
+              
+              <select id="filterCard">
+                <option value="">Todos os tipos de cartão</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="telemedicina">Saúde</option>
+              </select>
+            </div>
+
+            <div class="produtos">
+           
+                <ul id="produtoLista">
+                   
+                    <li 
+                      data-city="americana,osasco" 
+                      data-seg="academia" 
+                      data-card="alimentacao"
+                      data-tags="academia fitness treino totalpass"
+                      class="card-b"
+                    >
+                      <img src="assets/img/gym.jpg" alt="Total Pass"/>
+                      <h3>Total Pass</h3>
+                      <p>Benefício para academias.</p>
+                    </li>
+                  
+                    <li 
+                      data-city="osasco" 
+                      data-seg="farmacia" 
+                      data-card="alimentacao,combustivel"
+                      data-tags="remedio farmacia saude drogasil"
+                    >
+                      <img src="./assets/img/farmacia.avif" alt="Drogasil"/>
+                      <h3>Drogasil</h3>
+                      <p>Descontos em medicamentos.</p>
+                    </li>
+                  
+                    <li 
+                      data-city="americana,osasco" 
+                      data-seg="telemedicina" 
+                      data-card="alimentacao"
+                      data-tags="medico online consulta telemedicina saude atendimento"
+                    >
+                      <img src="./assets/img/med.jpg" alt="Consulta Online"/>
+                      <h3>Consulta Online</h3>
+                      <p>Atendimento médico à distância com
+                  
+                    
+                      </div>
+          </div>
+      
+          <!-- Área do mapa -->
+          <div class="map-container">
+           
+            <div class="mapsearch" id="map" style="width: 100%; height: 100%;"></div>
+          </div>
+
+          
+        </div>
+      </div>
+      
+</div>
+
+<!-- Backdrop (sem clicar no fundo do modal) -->
+<div id="backdrop" class="backdrop"></div>
+
+  <section class="hero">
+    <div class="content">
+
+
+    <div class="slides">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <div class="slide s1">
+            <div class="content-slide">
+                <h1>Slide 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, magni!</p>
+            </div>
+            <img src="./imgs/1.png" alt="">
+        </div>
+
+        <div class="slide s2">
+            <div class="content-slide">
+                <h1>Slide 2</h1>
+                <p>Segundo</p>
+            </div>
+            <img src="./imgs/2.png" alt="">
+        </div>
+
+        <div class="slide s3">
+            <div class="content-slide">
+                <h1>Slide 3</h1>
+                <p>ultimo</p>
+            </div>
+            <img src="./imgs/3.png" alt="">
+        
+        </div>
+
+    </div>
+
+    <div class="navigation-slides">
+        <label class="bar" for="slide1"></label>
+        <label class="bar" for="slide2"></label>
+        <label class="bar" for="slide3"></label>
+    </div>
+    </div>
+
+ 
+  </section>
+
+
+
+    <script src="./scripts/global.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+</body>
+</html>
